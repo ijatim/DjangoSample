@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/posts/', post_views.PostList.as_view()),
     path('api/posts/<int:pk>/vote/', post_views.VoteCreate.as_view()),
+    path('api/posts/snapshot/', post_views.SnapShotCreate.as_view()),
     path('api-auth/', include('rest_framework.urls'))
 ]
